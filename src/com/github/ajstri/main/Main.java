@@ -41,7 +41,7 @@ public class Main {
         int b;
         String input;
 
-        while (cont){
+        while (cont) {
             System.out.print("Please input a: ");
             a = scan.nextInt();
             System.out.print("Please input b: ");
@@ -63,20 +63,20 @@ public class Main {
                 for (char encode : encodeArray) {
                     result.append(encode(a, b, encode));
                 }
-                System.out.println("Encoded, the result is: " + result.toString());
+                System.out.println("Encoded, the result is: " + result.toString().toUpperCase());
             }
             else if (enOrDecode == 2) {
                 char[] decodeArray = input.toLowerCase().toCharArray();
                 for (char decode : decodeArray) {
                     result.append(decode(a, b, decode));
                 }
-                System.out.println("Decoded, the result is: " + result.toString());
+                System.out.println("Decoded, the result is: " + result.toString().toUpperCase());
             }
             else {
                 System.out.println("Please input 1 or 2.");
             }
 
-            System.out.println("Would you like to try again? (y/n)");
+            System.out.print("Would you like to try again? (y/n): ");
 
             String yesOrNo = scan.next();
             if (yesOrNo.contains("n")) {
